@@ -1,0 +1,16 @@
+{% extends "base_generic.html" %} 
+
+{% block content %}  
+  <h2>Новости</h2>  
+  {% for article in articles %}  
+    <div>  
+      <h3>{{ article.title }}</h3>  
+      <p>{{ article.content }}</p>  
+      <p>Автор: {{ article.author.username }} | Дата: {{ article.created_at }}</p>  
+      <a href="{% url 'edit_article' article.pk %}">Редактировать</a>  
+    </div>  
+  {% empty %}  
+    <p>Нет статей.</p>  
+  {% endfor %}  
+  <a href="{% url 'article_create' %}">Создать новую статью</a>  
+{% endblock %}  

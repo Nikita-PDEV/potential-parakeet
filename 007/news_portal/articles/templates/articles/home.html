@@ -1,0 +1,13 @@
+{% extends "base_generic.html" %}
+
+<!DOCTYPE html>  
+<html>  
+<head>  
+    <title>Главная страница</title>  
+</head>  
+<body>  
+    <h1>Добро пожаловать на главную страницу!</h1>  
+    <a href="{% url 'register' %}">Регистрация</a>  
+    <a href="{% url 'article_create' %}">Создать статью</a>  
+</body>  
+</html>
